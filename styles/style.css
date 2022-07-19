@@ -10,6 +10,11 @@ Google font popins 400 reg and 700 bold end
 /* -----------------------------------------
             Base styles start
 ------------------------------------------ */
+:root{
+    --home_bgc: #000;
+    --primary_font_color: #000;
+    --special_font_color: #fff;
+}
 *{
     margin: 0;
     padding: 0;
@@ -24,3 +29,28 @@ body{
             Base styles end
 ------------------------------------------ */
 
+
+
+/* -----------------------------------------
+            Mobile view start
+------------------------------------------ */
+/* -----------------------------------------
+            Main tag styles start
+------------------------------------------ */
+main{
+    width: 100%;
+}
+.home{
+    width: 90%;
+    margin: 1em auto;
+    background-color: var(--home_bgc);
+}
+.home .home_content .home_info h1 , .home .home_content .home_info p{
+    color: var(--special_font_color);
+} 
+/* -----------------------------------------
+            Main tag styles end
+------------------------------------------ */
+/* -----------------------------------------
+            Mobile view end
+------------------------------------------ */
