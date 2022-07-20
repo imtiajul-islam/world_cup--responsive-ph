@@ -14,6 +14,8 @@ Google font popins 400 reg and 700 bold end
     --home_bgc: #000;
     --primary_font_color: #000;
     --special_font_color: #fff;
+    --home_btn_color: rgb(221, 0, 0);
+    --footer_bg_color: #000;
 }
 *{
     margin: 0;
@@ -21,9 +23,15 @@ Google font popins 400 reg and 700 bold end
     box-sizing: border-box;
 }
 body{
-    max-width: 1920px;
+    width: 100%;
+    /* max-width: 1920px; */
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
+}
+.btn{
+    text-decoration:none;
+    padding: .5em 1em;
+    border-radius: 5px;
 }
 /* -----------------------------------------
             Base styles end
@@ -44,13 +52,151 @@ main{
     width: 90%;
     margin: 1em auto;
     background-color: var(--home_bgc);
+    border-radius: 8px;
+}
+.home .home_content .home_info h1 , .home .home_content{
+    padding: 1em 0;
+}
+.home .home_content .home_info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 15em;
+    margin: auto;
 }
 .home .home_content .home_info h1 , .home .home_content .home_info p{
+    text-align: center;
     color: var(--special_font_color);
 } 
+.home .home_content .home_info a{
+    margin-top: 1em;
+    color: var(--special_font_color);
+    background-color: var(--home_btn_color);
+}
+/* -----------------------------------------
+            Home second section start
+------------------------------------------ */
+.home .home_banner{
+    display: flex;
+    justify-content: center;
+}
+/* .home .home_banner:hover .home_banner_img{
+    transform: scale(1.1)
+} */
+.home .home_banner img{
+    width: 15em;
+}
+/* -----------------------------------------
+            Home second section end
+------------------------------------------ */
+
+/* -----------------------------------------
+            article and nav start
+------------------------------------------ */
+ .article_nav{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+nav{
+    width: 13em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.btn-n{
+    border: 1px solid rgb(221, 220, 220);
+    margin-bottom: 1em;
+    color: #000;
+}
+/* article */
+article{
+    border: 1px solid #d1d1d1;
+    margin: 1em 0;
+    border-radius: 10px;
+}
+.article{
+    width: 18em;
+}
+.article .card-img img{
+    width: 100%;
+} 
+.card-info{
+    padding: 0.5em 1em;
+}
+.card-info h4{
+    margin: 1em 0;
+}
+.article_btn{
+    padding: .3em .7em;
+    border: 1px solid rgb(141, 141, 141);
+    text-decoration: none;
+    font-size: .8em;
+    border-radius: 5px;
+    color: #000;
+}
+.card_core_info{
+    display: flex;
+    align-items: center;
+    
+}
+.time .fa-solid{
+    background-color: #fff;
+}
+.card_core_info .comment{
+    margin-left: 2em;
+}
+/* -----------------------------------------
+            article and nav end
+------------------------------------------ */
 /* -----------------------------------------
             Main tag styles end
 ------------------------------------------ */
+
+/* -----------------------------------------
+            Footer section start
+------------------------------------------ */
+footer{
+    
+    background-color: var(--footer_bg_color);
+}
+.footer_content{
+    width: 90%;
+    margin: 0 auto;
+}
+.heading{
+    display: flex;
+    height: 4em;
+    align-items: center;
+    justify-content: center;
+}
+.footer_content h3{
+    color: var(--special_font_color);
+}
+footer hr{
+    height: 1px;
+    background-color: #343434;
+    border: none;
+}
+/* footer info  */
+.footer_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.footer_info a{
+    text-decoration: none;
+    color: #a1a1a1;
+    margin: .5em 0;
+    
+}
+/* -----------------------------------------
+            Footer section end
+------------------------------------------ */
+
 /* -----------------------------------------
             Mobile view end
 ------------------------------------------ */
