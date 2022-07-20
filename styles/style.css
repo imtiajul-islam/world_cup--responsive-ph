@@ -101,14 +101,26 @@ main{
 .home .home_banner{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
-/* .home:hover{
-    animation-name: example;
-    animation-duration: 4s;
-} */
+.home:hover .home_banner img{
+    animation-name: zoom;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    background-color: #0e0e0e;
+}
+/* animation */
+@keyframes zoom {
+    0%{transform: scale(1)}
+    50%{transform: scale(1.1)}
+    100%{transform: scale(1);}
+}
+/* animation */
 .home .home_banner img{
     width: 100%;
     max-width: 20em;
+    transition:1s;
+
 }
 /* -----------------------------------------
             Home second section end
