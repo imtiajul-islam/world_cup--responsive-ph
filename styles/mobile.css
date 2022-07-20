@@ -1,0 +1,13 @@
+@media screen and (max-width:768px) {
+    .home_content{
+    display: flex;
+    justify-content: center;
+} 
+.home_content , .home_banner{
+    text-align: center;
+} 
+.home .home_content .home_info{
+    padding: 2em 0;
+    max-width: 20em;
+}
+}

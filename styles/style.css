@@ -14,7 +14,7 @@ Google font popins 400 reg and 700 bold end
     --home_bgc: #000;
     --primary_font_color: #000;
     --special_font_color: #fff;
-    --home_btn_color: rgb(221, 0, 0);
+    --home_btn_color: #396DDF;
     --footer_bg_color: #000;
 }
 *{
@@ -28,16 +28,34 @@ body{
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
 }
-.btn{
-    text-decoration:none;
-    padding: .5em 1em;
-    border-radius: 5px;
-}
+
 /* special button for tablet */
 #tab{
     display: none;
 }
 /* special button for tablet */
+
+.btn{
+    text-decoration:none;
+    padding: .5em 1em;
+    border-radius: 5px;
+}
+
+/* schdules */
+article{
+    padding: 1em;
+}
+article .flag{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+article .info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: .2em;
+}
 /* -----------------------------------------
             Base styles end
 ------------------------------------------ */
@@ -63,17 +81,7 @@ main{
     background-color: var(--home_bgc);
     border-radius: 8px;
 }
-.home_content{
-    display: flex;
-    justify-content: center;
-}
-.home_content , .home_banner{
-    text-align: center;
-}
-.home .home_content .home_info{
-    padding: 2em 0;
-    max-width: 20em;
-}
+
 .home .home_content .home_info h1{
     font-size: 1.7em;
 }
@@ -83,7 +91,7 @@ main{
 }
 .home .home_content .home_info a{
     margin: .5em 0;
-    background-color: rgb(146, 0, 0);
+    background-color: var(--home_btn_color);
     color: var(--special_font_color);
 }
 .home .home_content .home_info h1, .home .home_content .home_info p {
@@ -94,6 +102,10 @@ main{
     display: flex;
     justify-content: center;
 }
+/* .home:hover{
+    animation-name: example;
+    animation-duration: 4s;
+} */
 .home .home_banner img{
     width: 100%;
     max-width: 20em;
@@ -154,9 +166,9 @@ article{
     align-items: center;
     
 }
-.time .fa-solid{
+/* .time .fa-solid{
     background-color: #fff;
-}
+} */
 .card_core_info .comment{
     margin-left: 2em;
 }
@@ -167,7 +179,7 @@ article{
     font-size: .8em;
     border-radius: 5px;
     text-decoration: none;
-    background-color: rgb(212, 0, 0);
+    background-color: var(--home_btn_color);
     color: var(--special_font_color)
 }
 /* special button for tab */
@@ -181,8 +193,7 @@ article{
 /* -----------------------------------------
             Footer section start
 ------------------------------------------ */
-footer{
-    
+footer{    
     background-color: var(--footer_bg_color);
 }
 .footer_content{
@@ -222,126 +233,3 @@ footer hr{
 /* -----------------------------------------
             Mobile view end
 ------------------------------------------ */
-/* tablet */
-@media screen and (min-width: 768px)and (max-width:1023px)  {
-    /* special btn */
-    #tab{
-        display: block;
-    }
-    /* special btn */
-    .home{
-        display: flex;
-        align-items: center;
-        justify-content: space-evenly;
-    }
-    .home_content{
-        text-align: start;
-    }
-    .home .home_content .home_info h1{
-        font-size: 2.2em;
-    }
-    /* nav */
-    nav{
-        width: 100%;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-    nav a{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 30%;
-    }
-    /* artical */
-    .article{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(2 , 1fr);
-        grid-column-gap: 15px;
-    }
-    /* footer */
-    .footer_content{
-        padding: 3em 0;
-    }
-    .footer_info{
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: center;
-        margin: auto;
-        max-width: 40em;
-    }
-    .footer_info a{
-        margin-right: 30px;
-    }
-    .footer_info a:last-child, .footer_info a:nth-child(4){
-        margin-right: 0;
-    }
-}
-/* large view */
-@media screen and (min-width: 1024px) {
-    .home{
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-    }
-    .home_content{
-        text-align: start;
-    }
-    .home .home_content .home_info h1{
-        font-size: 2.2em;
-    }
-    /* nav */
-    nav{
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 320px;
-        margin: 1em 2em 0 0;
-        padding: 2em 1em;
-        background-color: #000;
-        border-radius: 10px;
-    }
-    nav a{
-        color: var(--special_font_color);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        background-color: var(--special_font_color);
-    }
-    /* artical */
-   
-    .article{
-        width: 100%;
-        display: grid;
-        grid-template-columns: repeat(3 , 1fr);
-        grid-column-gap: 15px;
-    }
-    .article_nav{
-        flex-direction: row;
-        align-items: flex-start;
-    }
-    /* image */
-    .home .home_banner{
-        display: flex;
-        justify-content: center;
-    }
-    .home .home_banner img{
-        width: 100%;
-        height: 100%;
-    }
-    /* footer */
-    .footer_content{
-        padding: 2em 0;
-
-    }
-    .footer_info{
-        display: flex;
-        margin: 3em 0;
-        flex-direction: row;
-        justify-content: space-evenly;
-    }
-}
