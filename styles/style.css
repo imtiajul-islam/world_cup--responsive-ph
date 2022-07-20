@@ -226,6 +226,16 @@ footer hr{
     margin: .5em 0;
     
 }
+/* social */
+.social{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    color:var(--special_font_color);
+}
+.social svg{
+    margin: .2em 1em;
+}
 /* -----------------------------------------
             Footer section end
 ------------------------------------------ */
