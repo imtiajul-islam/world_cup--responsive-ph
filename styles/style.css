@@ -24,7 +24,7 @@ Google font popins 400 reg and 700 bold end
 }
 body{
     width: 100%;
-    /* max-width: 1920px; */
+    max-width: 1920px;
     margin: 0 auto;
     font-family: 'Poppins', sans-serif;
 }
@@ -33,6 +33,11 @@ body{
     padding: .5em 1em;
     border-radius: 5px;
 }
+/* special button for tablet */
+#tab{
+    display: none;
+}
+/* special button for tablet */
 /* -----------------------------------------
             Base styles end
 ------------------------------------------ */
@@ -48,44 +53,50 @@ body{
 main{
     width: 100%;
 }
-.home{
-    width: 90%;
-    margin: 1em auto;
-    background-color: var(--home_bgc);
-    border-radius: 8px;
-}
-.home .home_content .home_info h1 , .home .home_content{
-    padding: 1em 0;
-}
-.home .home_content .home_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 15em;
-    margin: auto;
-}
-.home .home_content .home_info h1 , .home .home_content .home_info p{
-    text-align: center;
-    color: var(--special_font_color);
-} 
-.home .home_content .home_info a{
-    margin-top: 1em;
-    color: var(--special_font_color);
-    background-color: var(--home_btn_color);
-}
 /* -----------------------------------------
             Home second section start
 ------------------------------------------ */
+.home{
+    width: 90%;
+    margin: 1em auto;
+    padding: 0 10%;
+    background-color: var(--home_bgc);
+    border-radius: 8px;
+}
+.home_content{
+    display: flex;
+    justify-content: center;
+}
+.home_content , .home_banner{
+    text-align: center;
+}
+.home .home_content .home_info{
+    padding: 2em 0;
+    max-width: 20em;
+}
+.home .home_content .home_info h1{
+    font-size: 1.7em;
+}
+.home .home_content .home_info p{
+    margin: .5em 0;
+    margin-bottom: 1.2em;
+}
+.home .home_content .home_info a{
+    margin: .5em 0;
+    background-color: rgb(146, 0, 0);
+    color: var(--special_font_color);
+}
+.home .home_content .home_info h1, .home .home_content .home_info p {
+    color: var(--special_font_color);
+}
+/* img */
 .home .home_banner{
     display: flex;
     justify-content: center;
 }
-/* .home .home_banner:hover .home_banner_img{
-    transform: scale(1.1)
-} */
 .home .home_banner img{
-    width: 15em;
+    width: 100%;
+    max-width: 20em;
 }
 /* -----------------------------------------
             Home second section end
@@ -149,6 +160,17 @@ article{
 .card_core_info .comment{
     margin-left: 2em;
 }
+/* special button for tab */
+#tab{
+    margin: 2em 0;
+    padding: .5em 1em;
+    font-size: .8em;
+    border-radius: 5px;
+    text-decoration: none;
+    background-color: rgb(212, 0, 0);
+    color: var(--special_font_color)
+}
+/* special button for tab */
 /* -----------------------------------------
             article and nav end
 ------------------------------------------ */
@@ -200,3 +222,30 @@ footer hr{
 /* -----------------------------------------
             Mobile view end
 ------------------------------------------ */
+/* tablet */
+@media screen and (min-width: 768px)and (max-width:1023px)  {
+    /* special btn */
+    #tab{
+        display: block;
+    }
+    /* special btn */
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+    .home_content{
+        text-align: start;
+    }
+    .home .home_content .home_info h1{
+        font-size: 2.2em;
+    }
+    /* nav */
+    nav{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
